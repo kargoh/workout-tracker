@@ -1,0 +1,100 @@
+@use 'variables' as *;
+
+.calendar-section {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid $card-border;
+
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .nav-btn {
+      background: transparent;
+      border: none;
+      color: $text-muted;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0 8px;
+
+      &:hover {
+        color: $text-main;
+      }
+    }
+  }
+
+  .weekdays-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 0.7rem;
+    color: $text-muted;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+
+    .day-square {
+      aspect-ratio: 1;
+      border-radius: 6px;
+      background: $card-bg;
+      border: 1px solid $card-border;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
+
+      &.empty {
+        visibility: hidden;
+        cursor: default;
+      }
+
+      &.yes {
+        background-color: $accent-green;
+        border-color: $accent-green;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      &.no {
+        background-color: $accent-red;
+        border-color: $accent-red;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      &.today {
+        box-shadow: 0 0 0 2px $accent-blue;
+      }
+
+      &.selected {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 2px #fff;
+        z-index: 2;
+      }
+
+      &.future {
+        opacity: 0.25;
+        cursor: not-allowed;
+        background: $bg-color;
+      }
+    }
+  }
+}

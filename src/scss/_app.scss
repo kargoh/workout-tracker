@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+body {
+  background-color: $bg-color;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+    min-width: 380px;
+    min-height: 590px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+  margin: 0 auto;
+  background: $card-bg;
+  padding: 16px;
+  color: $text-main;
+  font-family: system-ui, -apple-system, sans-serif;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}

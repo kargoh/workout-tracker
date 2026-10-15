@@ -1,0 +1,57 @@
+@use 'variables' as *;
+
+.question-card {
+  text-align: center;
+  padding: 16px 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  margin: 0px 0px 12px 0px;
+
+  .selected-date-indicator {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $accent-blue;
+  }
+
+  .question-text {
+    font-size: 1.05rem;
+    margin: 6px 0 14px;
+    font-weight: 600;
+  }
+
+  .toggle-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+
+    .toggle-btn {
+      flex: 1;
+      padding: 10px 16px;
+      border: 1px solid $card-border;
+      border-radius: 8px;
+      background: $bg-color;
+      color: $text-main;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &.btn-no.active {
+        background-color: $accent-red;
+        border-color: $accent-red;
+      }
+
+      &.btn-yes.active {
+        background-color: $accent-green;
+        border-color: $accent-green;
+      }
+    }
+  }
+
+  .status-hint {
+    font-size: 0.75rem;
+    color: $text-muted;
+    margin-top: 8px;
+  }
+}

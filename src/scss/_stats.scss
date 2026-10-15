@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+.stats-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+
+  .stat-badge {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid $card-border;
+    border-radius: 8px;
+    padding: 8px 4px;
+    text-align: center;
+
+    .stat-value {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      color: $text-muted;
+    }
+  }
+}

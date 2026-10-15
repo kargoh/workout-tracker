@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid $card-border;
+
+  .icon-text-btn {
+    background: transparent;
+    border: none;
+    color: $text-muted;
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+
+    &:hover {
+      color: $text-main;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    &.danger:hover {
+      color: $accent-red;
+    }
+  }
+}
