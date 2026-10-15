@@ -297,6 +297,20 @@ onMounted(() => {
 </template>
 
 <style scoped>
+* {
+	box-sizing: border-box;
+	user-select: none;
+	font-size: 100%;
+	touch-action: manipulation;
+}
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: clamp(16px, 2vh, 32px);
+	line-height: clamp(16px, 2vh, 32px);
+	overflow: hidden;
+}
+
 :root {
   --bg-color: #0f172a;
   --card-bg: #1e293b;
@@ -308,9 +322,15 @@ onMounted(() => {
   --accent-blue: #3b82f6;
 }
 
+#app {
+  min-width: 640px;
+  min-height: 360px;
+  width: 100vw;
+  height: 100vh;  
+}
+
 .app-container {
-  width: 100%;
-  max-width: 380px;
+ 
   margin: 0 auto;
   background: #1e293b;
   border: 1px solid #334155;
