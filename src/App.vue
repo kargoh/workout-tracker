@@ -297,6 +297,17 @@ onMounted(() => {
 </template>
 
 <style scoped>
+:root {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-green: #22c55e;
+  --accent-red: #ef4444;
+  --accent-blue: #3b82f6;
+}
+
 * {
 	box-sizing: border-box;
 	user-select: none;
@@ -311,15 +322,8 @@ html {
 	overflow: hidden;
 }
 
-:root {
-  --bg-color: #0f172a;
-  --card-bg: #1e293b;
-  --card-border: #334155;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --accent-green: #22c55e;
-  --accent-red: #ef4444;
-  --accent-blue: #3b82f6;
+body {
+  margin: 0px !important;
 }
 
 #app {
@@ -330,15 +334,12 @@ html {
 }
 
 .app-container {
- 
   margin: 0 auto;
   background: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 12px;
-  padding: 16px;
   color: #f8fafc;
   font-family: system-ui, -apple-system, sans-serif;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  padding: 16px;
 }
 
 .app-header {
